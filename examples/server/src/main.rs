@@ -24,7 +24,7 @@ struct GenerateResponse {
 async fn health() -> impl IntoResponse {
     Json(serde_json::json!({
         "status": "ok",
-        "version": hanren_core::VERSION,
+        "version": hanren::VERSION,
     }))
 }
 
@@ -49,7 +49,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/v1/generate", post(generate));
 
     let addr = SocketAddr::from(([0, 0, 0, 0], 8080));
-    log::info!("🗡️  HANREN Server v{}", hanren_core::VERSION);
+    log::info!("🗡️  HANREN Server v{}", hanren::VERSION);
     log::info!("Listening on http://{}", addr);
 
     let listener = tokio::net::TcpListener::bind(addr).await?;

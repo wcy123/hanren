@@ -14,7 +14,7 @@ path = "src/main.rs"
 [dependencies]
 hanren.workspace = true
 hanren-common.workspace = true
-ggml.workspace = true
+hanren-ops.workspace = true
 anyhow.workspace = true
 log.workspace = true
 env_logger.workspace = true

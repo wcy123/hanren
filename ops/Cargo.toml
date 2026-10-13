@@ -1,5 +1,5 @@
 [package]
-name = "ggml"
+name = "hanren-ops"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true

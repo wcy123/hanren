@@ -19,10 +19,10 @@ repository = "https://github.com/wcy123/hanren"
 
 [workspace.dependencies]
 # Internal crates
-ops = { path = "ops" }
+hanren-ops = { path = "ops" }
 hanren-io = { path = "io" }
 hanren-tokenizer = { path = "tokenizer" }
-hanren-core = { path = "core" }
+hanren = { path = "core" }
 hanren-common = { path = "common" }
 
 # External dependencies

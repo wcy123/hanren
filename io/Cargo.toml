@@ -8,6 +8,6 @@ repository.workspace = true
 description = "GGUF file format parser and model I/O"
 
 [dependencies]
-ops.workspace = true
+hanren-ops.workspace = true
 log.workspace = true
 thiserror.workspace = true

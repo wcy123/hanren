@@ -12,9 +12,9 @@ name = "hanren-server"
 path = "src/main.rs"
 
 [dependencies]
-hanren-core.workspace = true
+hanren.workspace = true
 hanren-common.workspace = true
-ops.workspace = true
+hanren-ops.workspace = true
 tokio.workspace = true
 axum.workspace = true
 tower.workspace = true
