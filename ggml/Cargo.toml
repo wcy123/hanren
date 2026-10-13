@@ -1,0 +1,12 @@
+[package]
+name = "ggml"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "GGML tensor library - Rust implementation"
+
+[dependencies]
+thiserror.workspace = true
+log.workspace = true

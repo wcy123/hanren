@@ -1,0 +1,37 @@
+[workspace]
+resolver = "2"
+members = [
+    "ggml",           # Core tensor library (like llama.cpp/ggml/)
+    "hanren",         # LLM library (like llama.cpp/src/)
+    "common",         # Common utilities
+    "examples/cli",   # CLI tool (like llama-cli)
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Wang Chunye <wcy123@github>"]
+license = "MIT"
+repository = "https://github.com/wcy123/hanren"
+
+[workspace.dependencies]
+# Internal crates
+ggml = { path = "ggml" }
+hanren = { path = "hanren" }
+hanren-common = { path = "common" }
+
+# External dependencies
+anyhow = "1.0"
+thiserror = "1.0"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 16
+
+[profile.release-lto]
+inherits = "release"
+lto = true
+codegen-units = 1

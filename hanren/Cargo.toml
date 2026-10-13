@@ -1,0 +1,13 @@
+[package]
+name = "hanren"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "HANREN - LLM inference library (like llama.cpp/src/)"
+
+[dependencies]
+ggml.workspace = true
+log.workspace = true
+thiserror.workspace = true

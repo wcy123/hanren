@@ -1,0 +1,20 @@
+[package]
+name = "hanren-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "HANREN CLI (like llama-cli)"
+
+[[bin]]
+name = "hanren"
+path = "src/main.rs"
+
+[dependencies]
+hanren.workspace = true
+hanren-common.workspace = true
+ggml.workspace = true
+anyhow.workspace = true
+log.workspace = true
+env_logger.workspace = true
