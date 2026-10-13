@@ -1,10 +1,13 @@
 [workspace]
 resolver = "2"
 members = [
-    "ggml",           # Core tensor library (like llama.cpp/ggml/)
-    "hanren",         # LLM library (like llama.cpp/src/)
+    "ops",            # Tensor operations
+    "io",             # GGUF parser
+    "tokenizer",      # Tokenizer/detokenizer
+    "core",           # LLM inference
     "common",         # Common utilities
-    "examples/cli",   # CLI tool (like llama-cli)
+    "examples/cli",   # CLI tool
+    "examples/server", # Web server
 ]
 
 [workspace.package]
@@ -16,8 +19,10 @@ repository = "https://github.com/wcy123/hanren"
 
 [workspace.dependencies]
 # Internal crates
-ggml = { path = "ggml" }
-hanren = { path = "hanren" }
+ops = { path = "ops" }
+hanren-io = { path = "io" }
+hanren-tokenizer = { path = "tokenizer" }
+hanren-core = { path = "core" }
 hanren-common = { path = "common" }
 
 # External dependencies
@@ -25,6 +30,11 @@ anyhow = "1.0"
 thiserror = "1.0"
 log = "0.4"
 env_logger = "0.11"
+tokio = { version = "1.0", features = ["full"] }
+axum = "0.7"
+tower = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
 
 [profile.release]
 opt-level = 3

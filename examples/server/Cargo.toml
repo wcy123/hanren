@@ -1,0 +1,25 @@
+[package]
+name = "hanren-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "HANREN inference server"
+
+[[bin]]
+name = "hanren-server"
+path = "src/main.rs"
+
+[dependencies]
+hanren-core.workspace = true
+hanren-common.workspace = true
+ops.workspace = true
+tokio.workspace = true
+axum.workspace = true
+tower.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+log.workspace = true
+env_logger.workspace = true

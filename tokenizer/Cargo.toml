@@ -1,0 +1,12 @@
+[package]
+name = "hanren-tokenizer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Tokenizer and detokenizer"
+
+[dependencies]
+log.workspace = true
+thiserror.workspace = true

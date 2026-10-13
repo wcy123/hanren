@@ -1,4 +1,4 @@
-//! GGUF file format parser (like ggml/include/gguf.h)
+//! GGUF file format parser
 
 use crate::Result;
 

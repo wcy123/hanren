@@ -1,0 +1,13 @@
+[package]
+name = "hanren-io"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "GGUF file format parser and model I/O"
+
+[dependencies]
+ops.workspace = true
+log.workspace = true
+thiserror.workspace = true
